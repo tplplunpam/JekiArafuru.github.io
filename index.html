@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jasa Digital Saya</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* container */
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:40px;
+border-radius:20px;
+width:90%;
+max-width:400px;
+animation:fadeUp 1.5s ease;
+}
+
+/* animasi */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+p{
+opacity:0.9;
+margin-bottom:25px;
+}
+
+/* tombol */
+.btn{
+display:block;
+margin:10px 0;
+padding:14px;
+border-radius:30px;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.portfolio{
+background:#ffffff22;
+color:white;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* music button */
+.music-btn{
+margin-top:20px;
+background:#ffffff22;
+border:none;
+color:white;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* glow background */
+.circle{
+position:absolute;
+width:400px;
+height:400px;
+background:radial-gradient(circle,#00f2fe,transparent);
+opacity:0.3;
+filter:blur(80px);
+animation:move 10s infinite alternate;
+}
+
+.circle2{
+background:radial-gradient(circle,#ff00cc,transparent);
+left:60%;
+top:50%;
+animation-delay:3s;
+}
+
+@keyframes move{
+from{
+transform:translateY(-100px);
+}
+to{
+transform:translateY(100px);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle circle2"></div>
+
+<div class="card">
+
+<h1>Jasa Digital</h1>
+
+<p>
+Website • Desain • Landing Page • QR Profile
+</p>
+
+<a class="btn whatsapp" href="https://wa.me/628123456789">
+Chat WhatsApp
+</a>
+
+<a class="btn portfolio" href="#">
+Lihat Portfolio
+</a>
+
+<button class="music-btn" onclick="toggleMusic()">
+🎵 Play / Pause Musik
+</button>
+
+</div>
+
+<audio id="bgmusic" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+let music=document.getElementById("bgmusic");
+
+function toggleMusic(){
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+}
+
+</script>
+
+</body>
+</html>
