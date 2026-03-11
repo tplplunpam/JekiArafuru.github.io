@@ -8,13 +8,18 @@
 
 <style>
 
+html, body{
+max-width:100%;
+overflow-x:hidden;
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial;
 }
-
+  
 body{
 height:100vh;
 display:flex;
@@ -24,6 +29,7 @@ background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
 overflow:hidden;
+overflow-x:hidden;
 }
 
 /* container */
@@ -98,6 +104,8 @@ cursor:pointer;
 /* glow background */
 .circle{
 position:absolute;
+top:0;
+left:0;
 width:400px;
 height:400px;
 background:radial-gradient(circle,#00f2fe,transparent);
@@ -120,6 +128,22 @@ transform:translateY(-100px);
 to{
 transform:translateY(100px);
 }
+}
+
+@media (max-width:480px){
+
+h1{
+font-size:26px;
+}
+
+p{
+font-size:14px;
+}
+
+.card{
+padding:30px;
+}
+
 }
 
 </style>
