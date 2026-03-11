@@ -9,6 +9,7 @@
 <style>
 
 html, body{
+width:100%;
 max-width:100%;
 overflow-x:hidden;
 }
@@ -103,21 +104,20 @@ cursor:pointer;
 
 /* glow background */
 .circle{
-position:absolute;
-top:0;
-left:0;
+position:fixed;
 width:400px;
 height:400px;
 background:radial-gradient(circle,#00f2fe,transparent);
 opacity:0.3;
 filter:blur(80px);
 animation:move 10s infinite alternate;
+pointer-events:none;
 }
 
 .circle2{
 background:radial-gradient(circle,#ff00cc,transparent);
-left:60%;
-top:50%;
+right:-100px;
+top:40%;
 animation-delay:3s;
 }
 
