@@ -167,7 +167,7 @@ Chat WhatsApp
 </a>
 
 <a class="btn portfolio" href="#">
-Lihat Portfolio
+Lihat Layanan Lainnya
 </a>
 
 <button class="music-btn" onclick="toggleMusic()">
@@ -176,21 +176,18 @@ Lihat Portfolio
 
 </div>
 
-<audio id="bgmusic" loop>
+<audio id="bgmusic" autoplay loop muted>
 <source src="RapsodiJKT48.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
-let music=document.getElementById("bgmusic");
+let music = document.getElementById("bgmusic");
 
-function toggleMusic(){
-if(music.paused){
+document.body.addEventListener("click", function(){
+music.muted = false;
 music.play();
-}else{
-music.pause();
-}
-}
+});
 
 </script>
 
