@@ -121,6 +121,8 @@ top:40%;
 animation-delay:3s;
 }
 
+/* biar center pas pake HP */
+  
 @keyframes move{
 from{
 transform:translateY(-100px);
@@ -131,7 +133,6 @@ transform:translateY(100px);
 }
 
 @media (max-width:480px){
-
 h1{
 font-size:26px;
 }
@@ -144,6 +145,30 @@ font-size:14px;
 padding:30px;
 }
 
+}
+
+/* List Layanan */
+  .services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-bottom:20px;
+}
+
+.service{
+background:#ffffff15;
+padding:10px;
+border-radius:10px;
+font-size:14px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.service span{
+margin-top:5px;
+font-size:13px;
 }
 
 </style>
@@ -160,13 +185,33 @@ padding:30px;
   
 <img src="FotoKu.jpg" style="width:120px;border-radius:50%;margin-bottom:15px;">
 
-<ul>
-<li>🚚 Kirim Paket</li>
-<li>🧹 Cleaning Rumah</li>
-<li>🛠️ Jasa Serabutan</li>
-<li>🚗 Sewa Mobil + Supir</li>
-<li>🛒 Palugada</li>
-</ul>
+<div class="services">
+<div class="service">
+🚚
+<span>Kirim Paket</span>
+</div>
+
+<div class="service">
+🧹
+<span>Cleaning Rumah</span>
+</div>
+
+<div class="service">
+🛠️
+<span>Jasa Serabutan</span>
+</div>
+
+<div class="service">
+🚗
+<span>Sewa Mobil + Supir</span>
+</div>
+
+<div class="service">
+🛒
+<span>Palugada</span>
+</div>
+
+</div>
 
 <a class="btn whatsapp" href="https://wa.me/6289654082548">
 Chat WhatsApp
